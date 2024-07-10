@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ElderFormController">
+   <children>
+      <TextField fx:id="txtName" layoutX="89.0" layoutY="85.0" onAction="#txtNameOnAction" prefHeight="24.0" prefWidth="506.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" stylesheets="@../CSs/color.css">
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass></TextField>
+      <JFXButton fx:id="btnButton" layoutX="624.0" layoutY="85.0" onAction="#btnSearchOnAction" style="-fx-background-radius: 15;" text="search">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/ElderAdd_pic/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="img" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../CSs/color.css" />
+            <URL value="@../CSs/fullpackstyling.css" />
+         </stylesheets></JFXButton>
+      <Label layoutX="89.0" layoutY="69.0" text="Enter name here:" />
+      <TableView fx:id="tblElder" layoutX="68.0" layoutY="177.0" prefHeight="341.0" prefWidth="619.0" stylesheets="@../CSs/fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="235.0" text="              Name" />
+          <TableColumn fx:id="colAge" prefWidth="116.0" text="         Age" />
+            <TableColumn fx:id="colFee" prefWidth="176.0" text="              Fee" />
+            <TableColumn fx:id="colPrint" prefWidth="88.0" text="    View " />
+        </columns>
+      </TableView>
+      <Label layoutX="334.0" layoutY="24.0" prefHeight="35.0" prefWidth="203.0" text="Elder Search" underline="true">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="28.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnButton1" layoutX="728.0" layoutY="86.0" onAction="#btnReportOnAction" style="-fx-background-radius: 15;" text="Get ElderList">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/dasahBoard_pic/report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="img" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../CSs/color.css" />
+            <URL value="@../CSs/fullpackstyling.css" />
+         </stylesheets>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="707.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/employee_pic/working.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

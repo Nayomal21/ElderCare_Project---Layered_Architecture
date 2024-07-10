@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootnode" prefHeight="428.0" prefWidth="622.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="246.0" fitWidth="375.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/login_form_pic/pexel.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D width="646.0" />
+         </viewport>
+      </ImageView>
+      <AnchorPane fx:id="leafNode" layoutX="361.0" prefHeight="428.0" prefWidth="280.0" style="-fx-background-color: #2f3542; -fx-border-radius: 5;" styleClass="anchor" stylesheets="@../CSs/fullpackstyling.css">
+         <children>
+            <Label layoutX="38.0" layoutY="97.0" text="User Name:" textFill="#f5f6fa">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/login_form_pic/username.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="157.0" text="Password:" textFill="#f5f6fa">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/login_form_pic/password.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="48.0" layoutY="330.0" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="207.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 20; -fx-border-radius: 20;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/login_form_pic/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Hyperlink layoutX="91.0" layoutY="392.0" onAction="#linkRegistrationOnAction" prefHeight="22.0" prefWidth="121.0" text="Register on here" />
+            <Label layoutX="69.0" layoutY="376.0" text="Don't have an account?" textFill="#f5f6fa" />
+            <Label layoutX="112.0" layoutY="40.0" prefHeight="32.0" prefWidth="80.0" text="Login" textFill="#f2ffe6" underline="true">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="38.0" layoutY="123.0" onAction="#txtUserNameOnAction" prefHeight="34.0" prefWidth="226.0" promptText="Input your user name here" style="-fx-background-radius: 30;">
+               <styleClass>
+                  <String fx:value="img" />
+                  <String fx:value="border" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../CSs/color.css" />
+                  <URL value="@../CSs/paneCss.css" />
+               </stylesheets>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="38.0" layoutY="180.0" onAction="#txtPasswordOnaction" prefHeight="34.0" prefWidth="226.0" promptText="Input your password here" style="-fx-background-radius: 30;">
+               <styleClass>
+                  <String fx:value="img" />
+                  <String fx:value="border" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../CSs/color.css" />
+                  <URL value="@../CSs/paneCss.css" />
+               </stylesheets>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="20.0" layoutY="215.0" prefHeight="49.0" prefWidth="341.0" text="Cinnamon White Elder Home" visible="false">
+         <font>
+            <Font name="Chilanka Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="118.0" prefHeight="87.0" prefWidth="359.0" text="Cinnamon White Elder Home" textFill="#221f1f">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="102.0" prefHeight="49.0" prefWidth="261.0" text="Welcome   to" textFill="#1e1c1c">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="96.0" fitWidth="163.0" layoutX="137.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/login_form_pic/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

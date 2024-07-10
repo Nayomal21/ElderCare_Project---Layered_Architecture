@@ -1,0 +1,12 @@
+{
+   // -fx-background-color:
+            #95a5a6;
+-fx-arc-height: 30;
+-fx-arc-width: 30;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1,1;
+    -fx-padding: 0 0 0 0;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+

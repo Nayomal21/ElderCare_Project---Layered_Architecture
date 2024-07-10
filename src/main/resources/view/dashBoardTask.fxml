@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" stylesheets="@../CSs/fullpackstyling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardTaskController">
+   <children>
+      <BarChart fx:id="bcItems" layoutX="510.0" layoutY="56.0" legendVisible="false" prefHeight="212.0" prefWidth="393.0" styleClass="chart" stylesheets="@../CSs/Chart%20Css.css">
+        <xAxis>
+          <CategoryAxis fx:id="XAxis" prefHeight="18.0" prefWidth="476.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="YAxis" minorTickCount="13" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="387.0" prefHeight="42.0" prefWidth="461.0" spacing="70.0" style="-fx-background-color: #009432; -fx-background-radius: 10;">
+         <children>
+            <Label text="Elder Name" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Payment Date" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="Amount" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="15.0" layoutY="447.0" prefHeight="111.0" prefWidth="458.0" style="-fx-background-radius: 10;">
+         <content>
+            <VBox fx:id="pnItems" prefHeight="115.0" prefWidth="441.0" style="-fx-background-radius: 10;" />
+         </content>
+      </ScrollPane>
+      <AreaChart fx:id="bcProfit" layoutX="462.0" layoutY="339.0" prefHeight="227.0" prefWidth="420.0" stylesheets="@../CSs/Chart%20Css.css">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label layoutX="569.0" layoutY="326.0" prefHeight="31.0" prefWidth="276.0" text="Month Wise Payments">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="584.0" layoutY="10.0" prefHeight="31.0" prefWidth="276.0" text="Items Stock Details">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="346.0" prefHeight="32.0" prefWidth="235.0" text="Upcoming Payments" underline="true">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="22.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pieChart" labelLineLength="0.0" layoutX="3.0" layoutY="-109.0" prefHeight="523.0" prefWidth="563.0" />
+      <Label layoutX="130.0" layoutY="6.0" prefHeight="31.0" prefWidth="276.0" text="Income Distribution ">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="241.0" layoutY="259.0" prefHeight="83.0" prefWidth="194.0">
+         <children>
+            <Label fx:id="lblEmployeeCount" layoutX="78.0" layoutY="36.0" prefHeight="42.0" prefWidth="50.0" text="30" textFill="#196114">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="-13.0" prefHeight="75.0" prefWidth="147.0" text="Employee Count ">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="inner_pane" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../CSs/color.css" />
+            <URL value="@../CSs/new%20dashboard%20ui.css" />
+         </stylesheets>
+      </Pane>
+      <Pane layoutX="24.0" layoutY="262.0" prefHeight="83.0" prefWidth="194.0" stylesheets="@../CSs/new%20dashboard%20ui.css">
+         <children>
+            <Label fx:id="lblCount" layoutX="75.0" layoutY="33.0" prefHeight="42.0" prefWidth="50.0" text="30" textFill="#196114">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="-13.0" prefHeight="75.0" prefWidth="109.0" text="Elder Count " textFill="#070707d4">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="inner_pane" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+.choice-box-popup {
+
+    -fx-popup-side: right; /* Change this value to left, top, or bottom to change the side of the popup */
+
+}
+.choice-box{
+
+    -fx-background-color:white;
+
+}

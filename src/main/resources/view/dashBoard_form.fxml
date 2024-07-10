@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="569.0" prefWidth="1028.0" style="-fx-background-color: #c2e6ee;" stylesheets="@../CSs/fullpackstyling.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="568.0" fitWidth="1114.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="568.0" />
+         </viewport>
+         <image>
+            <Image url="@../icon/icon/dasahBoard_pic/backgroundCheck.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="568.0" prefWidth="243.0" stylesheets="@../CSs/fullpackstyling.css">
+         <children>
+            <Label fx:id="lblUserName" layoutX="87.0" layoutY="104.0" prefHeight="33.0" prefWidth="78.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="image" fitHeight="69.0" fitWidth="69.0" layoutX="86.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/login_form_pic/logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton graphicTextGap="7.0" layoutY="140.0" onAction="#btnDashboardOnAction" prefHeight="40.0" prefWidth="259.0" styleClass="buttonLocal" text="Dashboard" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" x="5.0">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/dashBoard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <MenuButton fx:id="mbtnElder" alignment="CENTER" graphicTextGap="7.0" layoutY="180.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="259.0" stylesheets="@../CSs/fullpackstyling.css" text="     Elder" textAlignment="CENTER">
+              <items>
+                <MenuItem fx:id="mbtnSearch" mnemonicParsing="false" onAction="#BtnSearchOnAction" text="Search">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#btnAddOnAction" text="Add">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/addElder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#btnElderUpdateOnAction" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+              </items>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/elder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <MenuButton alignment="CENTER" layoutY="220.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="259.0" stylesheets="@../CSs/fullpackstyling.css" text="     Meal">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#BtnMealAddOnAction" text="Add">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#BtnMealUpdateOnAction" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/meal.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <MenuButton alignment="BASELINE_CENTER" layoutY="260.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="259.0" stylesheets="@../CSs/fullpackstyling.css" text="Employee" textAlignment="CENTER" textFill="#0a0000">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#BtnEmpSearchOnAction" text="Search">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#btnEmpAddOnAction" text="Add">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/addElder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#btnEmpUpdateOnAction" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/icon/dasahBoard_pic/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </MenuButton>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="27.0" layoutY="300.0" onAction="#btnItemOnAction" prefHeight="40.0" prefWidth="259.0" styleClass="buttonLocal" stylesheets="@../CSs/fullpackstyling.css" text="Item" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" x="71.0" y="36.0">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="12.0" layoutY="340.0" onAction="#btnPaymentOnAction" prefHeight="40.0" prefWidth="259.0" styleClass="buttonLocal" stylesheets="@../CSs/fullpackstyling.css" text="Payment">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/payment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="7.0" layoutY="380.0" onAction="#btnBillsOnAction" prefHeight="40.0" prefWidth="259.0" styleClass="buttonLocal" text="     Bills">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/bill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="69.0" fitWidth="115.0" layoutX="82.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../userImages/jimmy-fallon.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="7.0" layoutY="420.0" onAction="#btnReportsOnAction" prefHeight="40.0" prefWidth="259.0" styleClass="buttonLocal" text="Reports">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/dasahBoard_pic/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="70.0" layoutY="492.0" onAction="#btnLogoutOnAction" prefHeight="40.0" prefWidth="101.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" stylesheets="@../CSs/color.css" text="Log out">
+               <styleClass>
+                  <String fx:value="border" />
+                  <String fx:value="img" />
+                  <String fx:value="buttonLocal" />
+               </styleClass>
+               <font>
+                  <Font name="DejaVu Serif Condensed" size="13.0" />
+               </font></JFXButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="567.0" fitWidth="851.0" layoutX="259.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/dasahBoard_pic/backgroundcheck3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="567.0" fitWidth="851.0" layoutX="283.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/dasahBoard_pic/backgroundcheck3.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="leafNode" layoutX="249.0" prefHeight="568.0" prefWidth="884.0" />
+      <Line endX="-78.10000610351562" endY="483.0" layoutX="338.0" layoutY="85.0" startX="-78.10000610351562" startY="-85.0" styleClass="linear-grad" />
+   </children>
+</AnchorPane>

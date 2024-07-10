@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
+   <children>
+      <Label layoutX="279.0" layoutY="38.0" prefHeight="35.0" prefWidth="245.0" text="Payment  Form" underline="true">
+         <font>
+            <Font name="DejaVu Serif Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imPayment" fitHeight="328.0" fitWidth="309.0" layoutX="442.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/payment_form_pic/payment.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="employeePane" layoutX="45.0" layoutY="149.0" prefHeight="374.0" prefWidth="805.0">
+         <children>
+            <Label layoutX="32.0" layoutY="57.0" prefHeight="26.0" prefWidth="127.0" text="Employee Name:" />
+            <TextField fx:id="txtEmployeeName" layoutX="148.0" layoutY="53.0" onKeyPressed="#KeyEmployeeNamePressed" prefHeight="35.0" prefWidth="181.0" style="-fx-border-color: black;" />
+            <Label layoutX="121.0" layoutY="90.0" text="Press Enter to see previous salaries" textFill="#009432" />
+            <ImageView fx:id="imgIllustration" fitHeight="403.0" fitWidth="331.0" layoutX="367.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" x="63.0">
+               <image>
+                  <Image url="@../icon/icon/payment_form_pic/work.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblEsalary" layoutX="451.0" layoutY="47.0" prefHeight="245.0" prefWidth="280.0">
+              <columns>
+                <TableColumn fx:id="colEMonth" prefWidth="145.0" text="Month" />
+                <TableColumn fx:id="colEsalary" prefWidth="134.0" text="Salary" />
+              </columns>
+            </TableView>
+            <ChoiceBox fx:id="chbMonth" layoutX="141.0" layoutY="187.0" prefWidth="150.0" style="-fx-border-color: black;" stylesheets="@../CSs/choiceBox.css" />
+            <Label layoutX="35.0" layoutY="191.0" text="Salary Month :" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/report_form_pic/rombus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="-1.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/report_form_pic/rombus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="elderPane" layoutX="42.0" layoutY="149.0" prefHeight="391.0" prefWidth="805.0" visible="false">
+         <children>
+            <Label layoutX="44.0" layoutY="51.0" prefHeight="26.0" prefWidth="82.0" text="Elder Name:" />
+            <TextField fx:id="txtElderName" layoutX="150.0" layoutY="49.0" onKeyPressed="#KeyElderNamePressed" prefHeight="35.0" prefWidth="181.0" style="-fx-border-color: black;" />
+            <Label layoutX="118.0" layoutY="86.0" text="Press Enter to see previous payments" />
+            <ImageView fitHeight="194.0" fitWidth="305.0" layoutX="421.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/payment_form_pic/elder.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblfee" layoutX="396.0" layoutY="29.0" prefHeight="311.0" prefWidth="397.0">
+              <columns>
+                <TableColumn fx:id="colMonth" prefWidth="116.0" text="Month" />
+                <TableColumn fx:id="colTotal" text="Total" />
+                  <TableColumn fx:id="colPaidAmount" prefWidth="100.0" text="Paid Amount" />
+                  <TableColumn fx:id="colStatus" prefWidth="103.0" text="Status" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblAlert" layoutX="55.0" layoutY="187.0" prefHeight="30.0" prefWidth="311.0" text="Please select  Payment month from Table" textFill="#d71313" visible="false">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgAlert" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon/ElderAdd_pic/alert.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="4.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/report_form_pic/rombus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="80.0" layoutY="259.0" prefHeight="26.0" prefWidth="89.0" text="Description :" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="44.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <JFXTextArea fx:id="txtDescription" layoutX="190.0" layoutY="255.0" prefHeight="69.0" prefWidth="180.0" style="-fx-border-color: black; -fx-background-color: white;" />
+      <Label layoutX="83.0" layoutY="377.0" text="Date :" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="44.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="DpDate" layoutX="187.0" layoutY="374.0" prefHeight="24.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label fx:id="lblAmount" layoutX="83.0" layoutY="413.0" prefHeight="26.0" prefWidth="61.0" text="Amount :" />
+      <TextField fx:id="txtAmount" layoutX="186.0" layoutY="413.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="86.0" layoutY="124.0" prefHeight="43.0" prefWidth="120.0" text="Payement Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="105.0" text="Payment Details " underline="true">
+         <font>
+            <Font name="FreeSerif" size="21.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="pickElder" layoutX="83.0" layoutY="161.0" onAction="#rbtnElderPickOnAction" prefHeight="38.0" prefWidth="81.0" text="Elder" />
+      <JFXRadioButton fx:id="pickEmployee" layoutX="190.0" layoutY="172.0" onAction="#rbtnEmployeePickOnAction" text="Employee" />
+      <JFXButton layoutX="135.0" layoutY="475.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="96.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Save">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/bill_pic/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="img" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+      </JFXButton>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="44.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

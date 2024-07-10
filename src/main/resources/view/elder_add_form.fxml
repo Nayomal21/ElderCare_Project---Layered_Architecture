@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ElderAddFormController">
+   <children>
+      <Label layoutX="285.0" layoutY="15.0" prefHeight="35.0" prefWidth="367.0" text="Elder Application Form" underline="true">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="110.0" prefHeight="26.0" prefWidth="82.0" text="First Name:" />
+      <TextField fx:id="txtFirstName" layoutX="141.0" layoutY="110.0" prefHeight="35.0" prefWidth="181.0" style="-fx-border-color: black;" styleClass="te" stylesheets="@../CSs/fullpackstyling.css" />
+      <Label layoutX="66.0" layoutY="76.0" text="Resident Details">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="112.0" prefHeight="26.0" prefWidth="83.0" text="Last Name:" />
+      <TextField fx:id="txtLastName" layoutX="420.0" layoutY="110.0" prefHeight="35.0" prefWidth="167.0" style="-fx-border-color: black;" />
+      <Label layoutX="345.0" layoutY="164.0" prefHeight="26.0" prefWidth="62.0" text="NIC:" />
+      <TextField fx:id="txtNIC" layoutX="418.0" layoutY="158.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="59.0" layoutY="164.0" prefHeight="26.0" prefWidth="62.0" text="Address:" />
+      <TextField fx:id="txtAddress" layoutX="139.0" layoutY="159.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="597.0" layoutY="169.0" text="DOB:" />
+      <DatePicker fx:id="DpDOB" layoutX="676.0" layoutY="163.0" prefHeight="24.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="65.0" layoutY="211.0" text="Tel:" />
+      <Label layoutX="593.0" layoutY="111.0" prefHeight="26.0" prefWidth="83.0" text="Sur Name:" />
+      <TextField fx:id="txtSurName" layoutX="666.0" layoutY="109.0" prefHeight="35.0" prefWidth="179.0" style="-fx-border-color: black;" />
+      <TextField fx:id="txtTel" layoutX="137.0" layoutY="204.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="617.0" layoutY="238.0" prefHeight="23.0" prefWidth="225.0" text="Attach photo of medical records" />
+      <Group layoutX="47.0" layoutY="451.0">
+         <children>
+            <Label text="Admit Date:" />
+            <DatePicker fx:id="DpAdmitDate" layoutX="103.0" prefHeight="24.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <Label layoutY="55.0" text="Payment Date:" />
+            <DatePicker fx:id="DpPaymentDate" layoutX="103.0" layoutY="53.0" prefHeight="24.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <Label layoutX="3.0" layoutY="30.0" text="If diferrent from Payment Date" textFill="#e80909" />
+            <Label layoutX="285.0" prefHeight="26.0" prefWidth="91.0" text="Advance Fee:" />
+            <TextField fx:id="txtAdvanceFee" layoutX="378.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <Label layoutX="320.0" layoutY="55.0" text="Email :" />
+            <TextField fx:id="txtEmail" layoutX="384.0" layoutY="49.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+         </children>
+      </Group>
+      <Group layoutX="59.0" layoutY="262.0">
+         <children>
+            <Label text="Guardian Details">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutY="31.0" prefHeight="26.0" prefWidth="82.0" text="First Name:" />
+            <TextField fx:id="txtGFirstName" layoutX="80.0" layoutY="29.0" prefHeight="35.0" prefWidth="181.0" style="-fx-border-color: black;" />
+            <Label layoutX="269.0" layoutY="33.0" prefHeight="26.0" prefWidth="83.0" text="Last Name:" />
+            <TextField fx:id="txtGLastName" layoutX="352.0" layoutY="31.0" prefHeight="35.0" prefWidth="167.0" style="-fx-border-color: black;" />
+            <Label layoutX="277.0" layoutY="85.0" prefHeight="26.0" prefWidth="62.0" text="NIC:" />
+            <TextField fx:id="txtGNIC" layoutX="350.0" layoutY="79.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <Label layoutY="85.0" prefHeight="26.0" prefWidth="62.0" text="Address:" />
+            <Label layoutX="531.0" layoutY="83.0" text="Tel:" />
+            <Label layoutX="525.0" layoutY="32.0" prefHeight="26.0" prefWidth="83.0" text="Sur Name:" />
+            <TextField fx:id="txtGSurName" layoutX="598.0" layoutY="30.0" prefHeight="35.0" prefWidth="179.0" style="-fx-border-color: black;" />
+            <TextField fx:id="txtGtel" layoutX="608.0" layoutY="74.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <Label layoutX="364.0" layoutY="134.0" text="Relation to resident :" />
+            <TextField fx:id="txtRelation" layoutX="521.0" layoutY="125.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+            <JFXTextArea fx:id="txtArea" layoutX="84.0" layoutY="81.0" prefHeight="33.0" prefWidth="180.0" style="-fx-border-color: black; -fx-background-color: white;" />
+
+         </children>
+      </Group>
+      <Label layoutX="70.0" layoutY="404.0" text="Room Details">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="BASELINE_LEFT" layoutX="730.0" layoutY="505.0" onAction="#btnSaveOnAction" prefHeight="49.0" prefWidth="86.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Save">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/ElderAdd_pic/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="img" />
+            <String fx:value="border" />
+         </styleClass>text
+      </JFXButton>
+      <Label layoutX="338.0" layoutY="208.0" prefHeight="26.0" prefWidth="119.0" text="Medical History :" />
+      <JFXButton contentDisplay="RIGHT" layoutX="757.0" layoutY="202.0" onAction="#btnAttrachOnAction" prefHeight="6.0" prefWidth="47.0" stylesheets="@../CSs/attachButtton.css" text=" ">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/ElderAdd_pic/attach.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtMedicalHistory" layoutX="456.0" layoutY="203.0" prefHeight="35.0" prefWidth="300.0" style="-fx-border-color: black;" />
+      <Label layoutX="190.0" layoutY="534.0" prefHeight="26.0" prefWidth="522.0" text="This  is the email  which we sent monthly fee bill end of the month " textFill="#eb0000">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="455.0" prefHeight="26.0" prefWidth="91.0" text="Monthly Fee:" />
+      <TextField fx:id="txtMonthlyFee" layoutX="674.0" layoutY="455.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="197.0" layoutX="719.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/ElderAdd_pic/network-reviewing-online-resume-of-job-applicant.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

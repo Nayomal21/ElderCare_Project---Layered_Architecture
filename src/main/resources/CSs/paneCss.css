@@ -1,0 +1,18 @@
+.img {
+    -fx-border-radius: 30px 30px 30px 30px;
+}
+
+.border{
+    -fx-border-color:linear-gradient(to bottom, #00b1cc 0%, #0c4a9e 100%) ;
+}
+.pane32{
+    -fx-background-radius: 0,30,30,30;
+    -fx-border-radius: 0,30,30,30;
+    -fx-border-width: 0 30 30 30;
+
+}
+.text-field {
+    -fx-prompt-text-fill: #4a535b;
+}
+
+

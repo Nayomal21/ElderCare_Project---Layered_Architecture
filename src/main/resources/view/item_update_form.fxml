@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="353.0" prefWidth="442.0" style="-fx-background-color: #55efc4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemUpdateFormController">
+   <children>
+      <ImageView fitHeight="442.0" fitWidth="718.0" layoutX="-245.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/item_form_pic/bakground.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="101.0" text="Item Code*" />
+      <Label layoutX="250.0" layoutY="101.0" text="Description*" />
+      <TextField fx:id="txtDescription" layoutX="250.0" layoutY="121.0" prefHeight="35.0" prefWidth="134.0" />
+      <Label layoutX="44.0" layoutY="171.0" text="unit Price*" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/item_form_pic/cartIll.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUnitPrice" layoutX="43.0" layoutY="191.0" prefHeight="35.0" prefWidth="134.0" />
+      <Label layoutX="250.0" layoutY="171.0" text="Qty On Hand*" />
+      <TextField fx:id="txtQtyOnHand" layoutX="250.0" layoutY="191.0" prefHeight="35.0" prefWidth="134.0" />
+      <JFXButton buttonType="RAISED" layoutX="356.0" layoutY="248.0" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-radius: 30;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/dasahBoard_pic/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="248.0" onAction="#btnClearOnAction" prefHeight="44.0" prefWidth="91.0" style="-fx-background-radius: 30;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/item_form_pic/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblCode" layoutX="59.0" layoutY="121.0" prefHeight="35.0" prefWidth="81.0" textFill="#f50202">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="24.0" prefHeight="35.0" prefWidth="155.0" text="Update  Item" underline="true">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="chbType" layoutX="403.0" layoutY="197.0" prefHeight="24.0" prefWidth="52.0" />
+      <Label layoutX="406.0" layoutY="172.0" text="Unit*" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="227.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="227.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="380.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

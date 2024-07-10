@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.MealAddFormController">
+   <children>
+      <Label layoutX="281.0" layoutY="33.0" prefHeight="35.0" prefWidth="68.0" text="Add">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="95.0" prefHeight="20.0" prefWidth="104.0" text="BreakFast :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="199.0" text="Select items which need to make meal :">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="txtItem" layoutX="62.0" layoutY="219.0" onAction="#btnItemOnAction" prefHeight="35.0" prefWidth="278.0" style="-fx-border-color: black;" />
+      <TableView fx:id="tblItem" layoutX="56.0" layoutY="276.0" prefHeight="273.0" prefWidth="510.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="219.33334350585938" text="Item Name" />
+          <TableColumn fx:id="colQty" prefWidth="123.66665649414062" text="Qty" />
+            <TableColumn fx:id="colRemove" prefWidth="166.66665649414062" text="Edit" />
+        </columns>
+      </TableView>
+      <Label layoutX="474.0" layoutY="199.0" prefWidth="45.0" text="Qty :">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="txtQty" layoutX="476.0" layoutY="219.0" onAction="#btnQtyOnAction" prefHeight="46.0" prefWidth="45.0" style="-fx-border-color: black;" />
+      <JFXButton layoutX="635.0" layoutY="487.0" onAction="#btnSaveOnAction" prefHeight="46.0" prefWidth="77.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Save">
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass></JFXButton>
+      <JFXButton layoutX="759.0" layoutY="487.0" onAction="#btnClearOnAction" prefHeight="46.0" prefWidth="77.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Clear">
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass></JFXButton>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="677.0" layoutY="228.0" onAction="#btnAddToCartOnAction" prefHeight="33.0" prefWidth="120.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Add to cart">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/mealAdd_icon/img.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass>
+      </JFXButton>
+      <Label layoutX="353.0" layoutY="93.0" prefHeight="16.0" prefWidth="116.0" text="Lunch :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="95.0" prefHeight="16.0" prefWidth="116.0" text="Dinner :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtBreakFast" layoutX="141.0" layoutY="88.0" prefHeight="75.0" prefWidth="174.0" style="-fx-border-color: black; -fx-background-color: white;" stylesheets="@../CSs/fullpackstyling.css" />
+      <JFXTextArea fx:id="txtLunch" layoutX="416.0" layoutY="88.0" prefHeight="75.0" prefWidth="174.0" style="-fx-border-color: black; -fx-background-color: white;" />
+      <JFXTextArea fx:id="txtDinner" layoutX="695.0" layoutY="88.0" prefHeight="75.0" prefWidth="174.0" style="-fx-border-color: black; -fx-background-color: white;" />
+      <Label fx:id="txtDate" layoutX="340.0" layoutY="33.0" textFill="#e11919">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="33.0" text="Meal Details">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="28.0" />
+         </font>
+      </Label>
+      <Line endX="292.0" layoutX="394.0" layoutY="65.0" startX="-113.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="600.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="326.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="436.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="167.0" fitWidth="193.0" layoutX="652.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/mealAdd_icon/mealIll.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

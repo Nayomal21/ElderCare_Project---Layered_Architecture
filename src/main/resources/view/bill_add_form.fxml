@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BillAddFormController">
+   <children>
+      <Label layoutX="271.0" layoutY="28.0" prefHeight="35.0" prefWidth="276.0" text="Bill Adding Form" underline="true">
+         <font>
+            <Font name="DejaVu Serif Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="262.0" prefHeight="26.0" prefWidth="89.0" text="Description :" />
+      <JFXTextArea fx:id="txtDescription" layoutX="157.0" layoutY="258.0" prefHeight="69.0" prefWidth="180.0" style="-fx-border-color: black;" />
+      <Label layoutX="73.0" layoutY="343.0" text="Date :" />
+      <DatePicker fx:id="DpDate" layoutX="156.0" layoutY="340.0" prefHeight="24.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <Label layoutX="73.0" layoutY="379.0" prefHeight="26.0" prefWidth="61.0" text="Total :" />
+      <TextField fx:id="txtTotal" layoutX="156.0" layoutY="379.0" prefHeight="35.0" prefWidth="169.0" style="-fx-border-color: black;" />
+      <ImageView fx:id="IllBill" fitHeight="87.0" fitWidth="69.0" layoutX="134.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/bill_pic/billIll.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="elderPane" layoutX="46.0" layoutY="148.0" prefHeight="110.0" prefWidth="301.0">
+         <children>
+            <Label layoutX="29.0" layoutY="28.0" prefHeight="26.0" prefWidth="82.0" text="Elder Name:" />
+            <TextField fx:id="txtElderName" layoutX="115.0" layoutY="24.0" onKeyPressed="#KeyNamePressed" prefHeight="35.0" prefWidth="181.0" style="-fx-border-color: black;" />
+            <Label layoutX="89.0" layoutY="61.0" text="Press Enter to see previous bills" />
+            <JFXRadioButton fx:id="pickMedicine" graphicTextGap="0.0" layoutX="33.0" layoutY="87.0" onAction="#rbtnMediicalOnAction" text="Medical" />
+            <JFXRadioButton fx:id="pickGoods" graphicTextGap="0.0" layoutX="146.0" layoutY="87.0" onAction="#rbtnGoodOnAction" text="Goods" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/report_form_pic/rombus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXRadioButton fx:id="pickElder" layoutX="73.0" layoutY="129.0" onAction="#rbtnElderPickOnAction" prefHeight="38.0" prefWidth="81.0" text="Elder" />
+      <JFXRadioButton fx:id="pickItem" layoutX="180.0" layoutY="140.0" onAction="#rbtnItemPickOnAction" text="Item" />
+      <Label layoutX="76.0" layoutY="92.0" prefHeight="43.0" prefWidth="97.0" text="Bill Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="73.0" text="Bill Details " underline="true">
+         <font>
+            <Font name="FreeSans Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton graphicTextGap="0.0" layoutX="190.0" layoutY="421.0" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="border" stylesheets="@../CSs/color.css" text="Add">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/bill_pic/add.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <ImageView fx:id="IllHuman" fitHeight="257.0" fitWidth="214.0" layoutX="547.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/bill_pic/smart-payment.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBill" layoutX="355.0" layoutY="130.0" prefHeight="412.0" prefWidth="504.0" visible="false">
+        <columns>
+          <TableColumn fx:id="colDescription" prefWidth="179.33331298828125" text="       Description" />
+          <TableColumn fx:id="colDate" prefWidth="114.0" text="   Date" />
+            <TableColumn fx:id="colTotal" prefWidth="99.0" text="Total" />
+            <TableColumn fx:id="colView" prefWidth="111.66668701171875" text="View" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="214.0" layoutY="502.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="114.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/bill_pic/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="img" />
+            <String fx:value="border" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../CSs/color.css" />
+            <URL value="@../CSs/fullpackstyling.css" />
+         </stylesheets></JFXButton>
+      <Label fx:id="lblSelectImage" layoutX="75.0" layoutY="432.0" text="Select image :" />
+      <JFXButton layoutX="93.0" layoutY="501.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="96.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" text="Save">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/bill_pic/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="img" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../CSs/color.css" />
+            <URL value="@../CSs/fullpackstyling.css" />
+         </stylesheets>
+      </JFXButton>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="47.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="47.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="47.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="47.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

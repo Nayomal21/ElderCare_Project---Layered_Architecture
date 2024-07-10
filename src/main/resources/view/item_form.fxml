@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemFormController">
+   <children>
+      <Label layoutX="336.0" layoutY="15.0" text="Item Manage" underline="true">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblItem" layoutX="69.0" layoutY="104.0" prefHeight="450.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
+            <TableColumn fx:id="colDescription" prefWidth="178.33334350585938" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="135.66665649414062" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="168.0" text="Qty On Hand" />
+            <TableColumn fx:id="colAction" prefWidth="216.0" text="             Action" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtName" layoutX="74.0" layoutY="62.0" onAction="#txtNameOnAction" prefHeight="24.0" prefWidth="506.0" style="-fx-background-radius: 30;" stylesheets="@../CSs/color.css">
+         <styleClass>
+<!--            <String fx:value="img" />-->
+            <String fx:value="border" />
+         </styleClass></TextField>
+      <JFXButton layoutX="593.0" layoutY="62.0" onAction="#btnSearchOnAction" prefHeight="24.0" prefWidth="97.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="search">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/ElderAdd_pic/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass></JFXButton>
+      <Label layoutX="72.0" layoutY="46.0" prefHeight="16.0" prefWidth="169.0" text="Enter  Item name here:" />
+      <JFXButton buttonType="RAISED" layoutX="704.0" layoutY="61.0" onAction="#btnAddOnAction" prefHeight="33.0" prefWidth="152.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Add new Item">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/dasahBoard_pic/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>

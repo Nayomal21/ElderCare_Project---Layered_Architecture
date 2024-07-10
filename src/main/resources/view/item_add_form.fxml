@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="353.0" prefWidth="460.0" style="-fx-background-color: #74b9ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemAddFormController">
+   <children>
+      <ImageView fitHeight="364.0" fitWidth="760.0" layoutX="-244.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/item_form_pic/bakground.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="91.0" text="Item Code*" />
+      <Label layoutX="240.0" layoutY="91.0" text="Description*" />
+      <TextField fx:id="txtDescription" layoutX="240.0" layoutY="111.0" prefHeight="35.0" prefWidth="134.0" />
+      <Label layoutX="34.0" layoutY="161.0" text="Unit Price*" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="56.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/item_form_pic/cartIll.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUnitPrice" layoutX="33.0" layoutY="181.0" prefHeight="35.0" prefWidth="134.0" />
+      <Label layoutX="240.0" layoutY="161.0" text="Qty On Hand*" />
+      <TextField fx:id="txtQtyOnHand" layoutX="240.0" layoutY="181.0" prefHeight="35.0" prefWidth="134.0" />
+      <JFXButton buttonType="RAISED" layoutX="346.0" layoutY="238.0" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="91.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="linear-grad" />
+            <String fx:value="border" />
+            <String fx:value="img" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/bill_pic/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="249.0" layoutY="238.0" onAction="#btnClearOnAction" prefHeight="44.0" prefWidth="91.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>
+            <URL value="@../CSs/fullpackstyling.css" />
+            <URL value="@../CSs/color.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="img" />
+            <String fx:value="border" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/item_form_pic/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblCode" layoutX="49.0" layoutY="111.0" prefHeight="35.0" prefWidth="81.0" textFill="#f50202">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="14.0" prefHeight="35.0" prefWidth="155.0" text="Add New Item" underline="true">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="chbType" layoutX="405.0" layoutY="187.0" prefHeight="24.0" prefWidth="52.0" />
+      <Label layoutX="413.0" layoutY="160.0" text="Unit*" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="4.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="203.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="203.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="4.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="382.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icon/report_form_pic/rombus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

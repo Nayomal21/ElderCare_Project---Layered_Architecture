@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
+    <children>
+        <Label layoutX="54.0" layoutY="31.0" text="Registration Form" textFill="#f5f6fa" underline="true">
+            <font>
+                <Font name="DejaVu Serif Condensed Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUserId" layoutX="38.0" layoutY="108.0" prefHeight="34.0" prefWidth="226.0" promptText="Input your user id here" stylesheets="@../CSs/paneCss.css" />
+        <TextField fx:id="txtPw" layoutX="38.0" layoutY="260.0" prefHeight="34.0" prefWidth="226.0" promptText="Input your password here" stylesheets="@../CSs/paneCss.css" />
+        <TextField fx:id="txtName" layoutX="38.0" layoutY="180.0" prefHeight="34.0" prefWidth="226.0" promptText="Input your name here" stylesheets="@../CSs/paneCss.css" />
+        <Label layoutX="38.0" layoutY="85.0" text="User Id:" textFill="#f5f6fa" />
+        <Label layoutX="42.0" layoutY="164.0" text="Name:" textFill="#f5f6fa" />
+        <Label layoutX="42.0" layoutY="240.0" text="Password:" textFill="#f5f6fa" />
+        <JFXButton buttonType="RAISED" layoutX="37.0" layoutY="363.0" onAction="#btnRegisterOnAction" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: #1e90ff; -fx-border-radius: 20; -fx-background-radius: 20;" text="Register Now" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="DejaVu Serif Condensed" size="16.0" />
+            </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/register_form_pic/user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </JFXButton>
+      <ChoiceBox fx:id="choiceBox" layoutX="38.0" layoutY="321.0" prefWidth="150.0" />
+      <Label layoutX="38.0" layoutY="305.0" text="Positon:" textFill="#f5f6fa" />
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="13.0" onAction="#btnBackOnAction" prefHeight="32.0" prefWidth="32.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon/register_form_pic/BtnBack.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+</AnchorPane>

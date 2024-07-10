@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="profit" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b292414-20f0-4ae4-921e-2314e5648f13">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="expence" class="java.math.BigDecimal"/>
+	<parameter name="income" class="java.math.BigDecimal"/>
+	<parameter name="salary" class="java.math.BigDecimal"/>
+	<parameter name="profit" class="java.math.BigDecimal"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+  MONTH(date) AS month, 
+  SUM(CASE WHEN empId IS NULL THEN amount ELSE 0 END) AS income,
+  SUM(CASE WHEN empId IS NOT NULL THEN amount ELSE 0 END) AS expense
+FROM  `ElderCare`.`Payment` 
+WHERE 
+  MONTH(date) = 4 
+GROUP BY 
+  MONTH(date) 
+ORDER BY 
+  month;]]>
+	</queryString>
+	<field name="income" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="income"/>
+		<property name="com.jaspersoft.studio.field.label" value="income"/>
+	</field>
+	<field name="expense" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="expense"/>
+		<property name="com.jaspersoft.studio.field.label" value="expense"/>
+	</field>
+	<variable name="Income" class="java.lang.String">
+		<initialValueExpression><![CDATA[""]]></initialValueExpression>
+	</variable>
+	<group name="income">
+		<groupExpression><![CDATA[$F{income}]]></groupExpression>
+	</group>
+	<group name="expense">
+		<groupExpression><![CDATA[$F{expense}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="-6" width="595" height="84" uuid="84b4b2ab-eef1-4ba6-85e8-483ec37ebb22"/>
+				<box>
+					<bottomPen lineWidth="1.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Cinnamon White Elder Home]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="17" width="330" height="30" uuid="b41ba6bc-bda8-461f-8b0f-28d5953b0f68"/>
+				<text><![CDATA[66/2, Wata mavatha,Wijerama junction,Gangodawila,Nugegoda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="33" width="202" height="30" uuid="771c3581-7f9b-4df5-945f-051ae5067ee3"/>
+				<text><![CDATA[Registration number 3306]]></text>
+			</staticText>
+			<image>
+				<reportElement x="40" y="0" width="70" height="64" uuid="7b8451a3-d806-4b21-9d1f-bcb3569c6ccb"/>
+				<imageExpression><![CDATA["/home/nayomal/Desktop/projects/Eldercare/src/main/resources/icon/icon/login_form_pic/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="-57" width="595" height="120" uuid="4fcb7289-ca59-4ef0-ac37-f4ebc170d64c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="aakar" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Profit Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="33" width="100" height="30" uuid="80c10fcd-08b5-463c-ba44-2b243107b8ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Condensed" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="182" y="33" width="100" height="30" uuid="7bd7163f-6df1-4d4a-8124-f0b339ae8646"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Condensed" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="198" splitType="Stretch">
+			<staticText>
+				<reportElement x="57" y="6" width="150" height="30" uuid="1d053b31-03f0-4ebd-af22-7cd73f50c224"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Expences  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="46" width="136" height="30" uuid="64733c10-c2aa-455d-8f4a-b4ec397c2e56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Income :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="96" width="179" height="30" uuid="c50430c3-f3d6-465f-ab9a-962556fa7575"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Salary for employees :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="160" width="150" height="30" uuid="a5284be7-61ab-4e6e-aa02-6a03c6fec108"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Profit for this month :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="6" width="100" height="30" uuid="6cbe0bcd-cc59-4340-a0d4-0788ad151c5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{expence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="46" width="100" height="30" uuid="83907fb1-a10d-4bd1-a040-496d99ed280d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="101" width="100" height="30" uuid="c1bcce1c-eed9-4053-8aa9-134aa9e71bb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="160" width="100" height="30" uuid="8248fcce-47d6-4163-96ba-a6c78bea39dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="290" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="90" y="0" width="322" height="260" uuid="4c18ac0b-945c-4cf6-b731-d189a7df5a4d"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA[$P{income}]]></keyExpression>
+						<valueExpression><![CDATA[$P{income}]]></valueExpression>
+						<labelExpression><![CDATA["Elder Payments"]]></labelExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$P{expence}]]></keyExpression>
+						<valueExpression><![CDATA[$P{expence}]]></valueExpression>
+						<labelExpression><![CDATA["Expences"]]></labelExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$P{salary}]]></keyExpression>
+						<valueExpression><![CDATA[$P{salary}]]></valueExpression>
+						<labelExpression><![CDATA["Employee Salaries"]]></labelExpression>
+					</pieSeries>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<staticText>
+				<reportElement x="140" y="260" width="258" height="30" uuid="f92f01a3-5428-46ff-b74c-020085405b7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Condensed" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Distribution of Payemnts ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
